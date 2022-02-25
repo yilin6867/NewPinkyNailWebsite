@@ -1,0 +1,102 @@
+2022-02-24 19:54:50,252 - PID 296856 - <string> - INFO - Test
+2022-02-24 19:55:38,414 - PID 305036 - Main.py - DEBUG - C:\Users\Admin\Desktop\CompSci\NewPinkyNailWebsite\src/website/static
+2022-02-24 19:55:40,089 - PID 305036 - Main.py - INFO - Import Routes
+2022-02-24 20:04:54,943 - PID 303504 - Main.py - DEBUG - C:\Users\Admin\Desktop\CompSci\NewPinkyNailWebsite\src/website/static
+2022-02-24 20:04:54,949 - PID 303504 - Main.py - INFO - Import Routes
+2022-02-24 20:04:58,817 - PID 303504 - app.py - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Admin\Desktop\CompSci\NewPinkyNailWebsite\src\app\Routes.py", line 7, in get_landing
+    return render_template(
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Admin\Desktop\CompSci\NewPinkyNailWebsite\src/website/templates/content_home.html", line 1, in top-level template code
+    {% extends "site.html" %}
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Admin\Desktop\CompSci\NewPinkyNailWebsite\src/website/templates/site.html", line 8, in template
+    {% block {{title}} %}
+jinja2.exceptions.TemplateSyntaxError: expected token 'name', got '{'
+2022-02-24 20:05:12,828 - PID 303504 - app.py - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Admin\Desktop\CompSci\NewPinkyNailWebsite\src\app\Routes.py", line 7, in get_landing
+    return render_template(
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Admin\Desktop\CompSci\NewPinkyNailWebsite\src/website/templates/content_home.html", line 1, in top-level template code
+    {% extends "site.html" %}
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Admin\Desktop\CompSci\NewPinkyNailWebsite\src/website/templates/site.html", line 8, in template
+    {% block {{title}} %}
+jinja2.exceptions.TemplateSyntaxError: expected token 'name', got '{'
+2022-02-24 20:05:12,957 - PID 303504 - app.py - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Admin\Desktop\CompSci\NewPinkyNailWebsite\src\app\Routes.py", line 7, in get_landing
+    return render_template(
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\jinja2\environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Admin\Desktop\CompSci\NewPinkyNailWebsite\src/website/templates/content_home.html", line 1, in top-level template code
+    {% extends "site.html" %}
+  File "C:\Users\Admin\anaconda3\envs\NewPinkyNailWebsite\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Admin\Desktop\CompSci\NewPinkyNailWebsite\src/website/templates/site.html", line 8, in template
+    {% block {{title}} %}
+jinja2.exceptions.TemplateSyntaxError: expected token 'name', got '{'
+2022-02-24 20:05:30,344 - PID 305912 - Main.py - DEBUG - C:\Users\Admin\Desktop\CompSci\NewPinkyNailWebsite\src/website/static
+2022-02-24 20:05:30,350 - PID 305912 - Main.py - INFO - Import Routes
+2022-02-24 20:08:59,119 - PID 305884 - Main.py - DEBUG - C:\Users\Admin\Desktop\CompSci\NewPinkyNailWebsite\src/website/static
+2022-02-24 20:08:59,126 - PID 305884 - Main.py - INFO - Import Routes

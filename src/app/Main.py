@@ -5,17 +5,18 @@ import logging
 
 
 def init_logger(server):
-    logger = logging.getLogger(__name__)
-    log_handler = TimedRotatingFileHandler(server.root_path + server.config["LOG_FILE"],
-                                           when=server.config["LOG_WHEN_ROLLOVER"],
-                                           interval=server.config["LOG_INTERVAL"],
-                                           backupCount=server.config["LOG_BACK_UP_CNT"],
-                                           )
-    log_handler.setLevel(server.config["LOG_LVL"])
-    format_str = "%(asctime)s - PID %(process)d - %(filename)s - %(levelname)s - Session %(uuid)s - %(message)s"
+    server.logger.handlers = []
+    server.logger.setLevel(server.config["LOG_LVL"])
+    log_handler = TimedRotatingFileHandler(
+        server.root_path + server.config["LOG_FILE"],
+        when=server.config["LOG_WHEN_ROLLOVER"],
+        interval=server.config["LOG_INTERVAL"],
+        backupCount=server.config["LOG_BACK_UP_CNT"]
+    )
+    format_str = "%(asctime)s - PID %(process)d - %(filename)s - %(levelname)s - %(message)s"
     log_handler.setFormatter(logging.Formatter(format_str))
-    logger.addHandler(log_handler)
-    return logger
+    server.logger.addHandler(log_handler)
+    server.log_handler = log_handler
 
 
 def create_server(config_file):
@@ -24,7 +25,7 @@ def create_server(config_file):
     server.config.from_pyfile(root_dir.joinpath(config_file), silent=False)
     server.template_folder = root_dir.__str__() + server.config["HTML_TEMPLATES"]
     server.static_folder = root_dir.__str__() + server.config["STATIC_FOLDER"]
-    server.logger = init_logger(server)
+    init_logger(server)
     server.logger.debug(server.static_folder)
     with server.app_context():
         import Routes

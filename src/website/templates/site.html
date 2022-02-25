@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="/static/css/Tabs.css">
+<link rel="stylesheet" href="/static/css/Home.css">
 <head>
     <meta charset="UTF-8">
     <title>New Pinky Nail Salon</title>
 </head>
-    {% block welcome %}{% endblock %}
-    {% include "tabs.html" %}
-    {% if content == "home" %}
-        {% block home_content %}{% endblock %}
-    {% endif %}
+{% if content == "home" %}
+    {% block home_title %}{% endblock %}
+    {% block home_content %}{% endblock %}
+{% endif %}
+
+{% if content == "about" %}
+    {% block about_title %}{% endblock %}
+    {% block about_content %}{% endblock %}
+{% endif %}
+
+{% if content == "contact" %}
+    {% block contact_title %}{% endblock %}
+    {% block contact_content %}{% endblock %}
+{% endif %}
+
+{% if content == "gallery" %}
+    {% block gallery_title %}{% endblock %}
+    {% block gallery_content %}{% endblock %}
+{% endif %}
+
+{% if content == "service" %}
+    {% block service_title %}{% endblock %}
+    {% block service_content %}{% endblock %}
+{% endif %}
 </html>
